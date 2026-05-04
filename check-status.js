@@ -31,7 +31,7 @@ async function checkStatus() {
             console.log("New update detected! Sending to Discord...");
             
             await axios.post(WEBHOOK_URL, {
-                username: "Drocsid Status Monitor",
+                username: "_Discord_ Status Monitor",
                 embeds: [{
                     title: latestItem.title,
                     description: latestItem.contentSnippet ? latestItem.contentSnippet.substring(0, 2000) : "No description",
