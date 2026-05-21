@@ -40,7 +40,7 @@ async function checkStatus() {
                     title: latestItem.title,
                     description: latestItem.contentSnippet ? latestItem.contentSnippet.substring(0, 2000) : "No description",
                     url: latestItem.link,
-                    color: 5814783,
+                    color: 5793010,
                     timestamp: new Date(latestItem.pubDate)
                 }]
             });
