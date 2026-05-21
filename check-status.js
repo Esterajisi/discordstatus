@@ -21,7 +21,7 @@ async function checkStatus() {
         }
 
         const latestItem = feed.items[0];
-        const latestId = latestItem.guid || latestItem.link;
+        const latestId = (latestItem.id || latestItem.guid || latestItem.link).toString().trim();
         
         console.log("Latest ID from Feed: " + latestId);
 
