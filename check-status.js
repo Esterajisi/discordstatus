@@ -4,6 +4,11 @@ const Parser = require('rss-parser');
 const parser = new Parser({
   headers: {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+    'Accept': 'application/rss+xml, application/xml, text/xml, */*',
+    'Accept-Language': 'en-US,en;q=0.9',
+    'Accept-Encoding': 'gzip, deflate',
+    'Cache-Control': 'no-cache',
+    'Pragma': 'no-cache'
   },
 });
 
@@ -53,7 +58,7 @@ async function checkStatus() {
     } catch (error) {
         console.error("ERROR:");
         console.error(error.message);
-        if (error.response) console.error(error.response.data);
+        if (error.response) console.error(error.response.status, error.response.data);
         process.exit(1); // Force GitHub to show a Red X if it fails
     }
 }
